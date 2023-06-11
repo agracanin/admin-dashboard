@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -21,8 +22,8 @@
             </div>
 
             <div class="account">
-                <button><span class="material-icons search-icon">
-                        notifications
+                <button class="bell"><span class="material-icons search-icon icon-bell">
+                        notifications_none
                     </span></button>
                 <div class="admin-picture"></div>
                 <p>Alen Gracanin</p>
@@ -32,14 +33,14 @@
             <div class="profile">
                 <div class="admin-picture"></div>
                 <div class="account-details">
-                    <p class="greeting">Hello,</p>
+                    <p class="greeting">Hey there,</p>
                     <p class="name">Alen Gracanin <span class="username">(@agracanin)</span></p>
                 </div>
             </div>
             <div class="file-buttons">
                 <button class="file-button">New</button>
                 <button class="file-button">Upload</button>
-                <button class="file-button">Share</button>
+                <button class="file-button">Send</button>
             </div>
         </div>
     </header>
@@ -62,7 +63,143 @@
         </ul>
     </aside>
     <main>
-
+        <div class="projects">
+            <h2 class="content-title">Your Projects</h2>
+            <div class="cards">
+                <div class="project">
+                    <div class="project-text">
+                        <h2>Infinite Loop Loop</h2>
+                        <p>You've embarked on a quest to perfect the loop... the infinite loop, that is. It's like a
+                            roller coaster that never ends, unless you find the exit condition, of course. It's not
+                            about finding the end, but enjoying the spin. You're either living the coder's nightmare or
+                            redefining patience.</p>
+                    </div>
+                    <div class="project-buttons">
+                        <button><span class="material-icons">bookmark_border</span></button>
+                        <button><span class="material-icons">delete_outline</span></button>
+                        <button><span class="material-icons">send</span></button>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-text">
+                        <h2>Red Bull Night Shift</h2>
+                        <p>Fueled by energy drinks and late-night inspiration, you're tackling a project during the
+                            graveyard shift. Whether you're a vampire or just allergic to sunlight, this night owl
+                            project is where you shine... under the moonlight, of course! Let's see if you can finish
+                            before sunrise.</p>
+                    </div>
+                    <div class="project-buttons">
+                        <button><span class="material-icons">bookmark_border</span></button>
+                        <button><span class="material-icons">delete_outline</span></button>
+                        <button><span class="material-icons">send</span></button>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-text">
+                        <h2>CoffeeScript Extreme</h2>
+                        <p>It's a high-stakes, high-caffeine race against the clock. In this project, you're trying to
+                            find out just how many cups of coffee it takes to complete a scripting project. Spoiler
+                            alert: it's always more than you first estimated.</p>
+                    </div>
+                    <div class="project-buttons">
+                        <button><span class="material-icons">bookmark_border</span></button>
+                        <button><span class="material-icons">delete_outline</span></button>
+                        <button><span class="material-icons">send</span></button>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-text">
+                        <h2>404 Finder</h2>
+                        <p>The champion of hide-and-seek, you've decided to turn every "Page Not Found" error into a
+                            sought-after collectible. Here's to hoping you eventually find what you're looking for, even
+                            if it's just a semicolon that went rogue.</p>
+                    </div>
+                    <div class="project-buttons">
+                        <button><span class="material-icons">bookmark_border</span></button>
+                        <button><span class="material-icons">delete_outline</span></button>
+                        <button><span class="material-icons">send</span></button>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-text">
+                        <h2>Ctrl-Z King</h2>
+                        <p>You've managed to single-handedly keep the Undo function in business with your wild
+                            experimental streak. This project explores the limits of your creativity and the resilience
+                            of the undo command. Godspeed, you mad genius!</p>
+                    </div>
+                    <div class="project-buttons">
+                        <button><span class="material-icons">bookmark_border</span></button>
+                        <button><span class="material-icons">delete_outline</span></button>
+                        <button><span class="material-icons">send</span></button>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-text">
+                        <h2>Code Whisperer</h2>
+                        <p>In this project, you've developed the uncanny ability to understand what your code is saying,
+                            and it usually says, "It's not a bug, it's a feature." You're rewriting the rules, and the
+                            source code along with it. Keep whispering sweet nothings to those functions!</p>
+                    </div>
+                    <div class="project-buttons">
+                        <button><span class="material-icons">bookmark_border</span></button>
+                        <button><span class="material-icons">delete_outline</span></button>
+                        <button><span class="material-icons">send</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="side-content">
+            <h2 class="content-title">Announcements</h2>
+            <div class="announcements">
+                <div class="announcement">
+                    <h3>Site Maintenance</h3>
+                    <p>Who knew that changing light bulbs on a website could be so tricky... Prepare your hard hats,
+                        it's maintenance time!
+                    </p>
+                </div>
+                <div class="announcement">
+                    <h3>Community Share Day</h3>
+                    <p>We're playing digital show-and-tell, where everyone gets a chance to showcase their cool
+                        glitches. Come share your unicorn-colored error messages!</p>
+                </div>
+                <div class="announcement">
+                    <h3>Update Privacy Policy</h3>
+                    <p>Brace yourselves, folks. We're making our privacy policy so clear, even our coffee maker will
+                        understand it.</p>
+                </div>
+            </div>
+            <h2 class="content-title">Trending</h2>
+            <div class="trending">
+                <div class="user">
+                    <div class="admin-picture"></div>
+                    <div class="user-info">
+                        <span>@agracanin</span>
+                        <p>Super Cool Project</p>
+                    </div>
+                </div>
+                <div class="user">
+                    <div class="admin-picture user-2"></div>
+                    <div class="user-info">
+                        <span>@tegan</span>
+                        <p>World Peace Builder</p>
+                    </div>
+                </div>
+                <div class="user">
+                    <div class="admin-picture user-3"></div>
+                    <div class="user-info">
+                        <span>@kendall</span>
+                        <p>Life Changing App</p>
+                    </div>
+                </div>
+                <div class="user">
+                    <div class="admin-picture user-4"></div>
+                    <div class="user-info">
+                        <span>@alex</span>
+                        <p>No Traffic Maker</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 

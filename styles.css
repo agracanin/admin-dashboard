@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
+
+:root {
+    --teal: #008080;
+    --white: #F5F5F5;
+    --gray: #E0E0E0;
+    --orange: #FF7F50;
+    --lightteal: #00B8B8;
+    --darkgray: #333333;
+    --red: #FF4C4C;
+
+    --avatar1: url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/edd6b3162071169.63cff2288f7d4.jpg');
+    --avatar2: url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/09a132162071169.63cfea3ebff77.jpg');
+    --avatar3: url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/35b163162071169.63cfea3ebf349.jpg');
+    --avatar4: url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/4e429d162071169.63cfe2724adde.jpg');
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -20,14 +36,16 @@ body {
 
 .header {
     grid-column: 2 / 3;
-    background-color: gray;
+    background-color: var(--white);
     padding: 25px;
     font-weight: 500;
+    color: var(--darkgray);
 }
 
 .sidebar {
     grid-row: 1 / 3;
-    background-color: cyan;
+    background-color: var(--teal);
+    color: var(--white);
 }
 
 .top-header {
@@ -49,10 +67,13 @@ div.account {
 }
 
 .admin-picture {
-    background-color: white;
+    background-color: var(--orange);
+    background-image: var(--avatar1);
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    background-size: cover;
+    background-position: center;
 }
 
 .search-bar {
@@ -61,6 +82,8 @@ div.account {
     border-radius: 99em;
     border: none;
     margin-left: 1.25rem;
+    background-color: var(--gray);
+    outline-color: var(--teal);
 }
 
 .search-icon {
@@ -69,6 +92,12 @@ div.account {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+.search-icon:hover {
+    color: var(--teal);
+    transform: scale(1.1);
 }
 
 .bottom-header {
@@ -92,6 +121,17 @@ div.profile>.admin-picture {
     justify-content: space-around;
 }
 
+
+.bell {
+    background: none;
+    border: none;
+}
+
+.icon-bell {
+    font-size: 2em;
+    color: var(--darkgray);
+}
+
 .file-button {
     margin: 10px;
     padding: 0.5em 1.5em;
@@ -100,7 +140,16 @@ div.profile>.admin-picture {
     border: none;
     cursor: pointer;
     font-family: inherit;
+    background-color: var(--teal);
+    color: var(--white);
+    transition: transform 0.3s ease-in-out;
 }
+
+.file-button:hover {
+    background-color: var(--lightteal);
+    transform: scale(1.1);
+}
+
 
 .sidebar-title {
     font-size: 2em;
@@ -128,6 +177,13 @@ li>a {
     gap: 2em;
     margin: 5px 5px;
     font-size: 1.5em;
+    color: var(--white);
+    transition: transform 0.3s ease-in-out;
+}
+
+li>a:hover {
+    color: var(--lightteal);
+    transform: scale(1.1);
 }
 
 a>.material-icons {
@@ -139,4 +195,133 @@ a>.material-icons {
     flex-direction: column;
     justify-content: center;
     margin-top: 75px;
+}
+
+main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background-color: var(--gray);
+}
+
+.projects {
+    grid-column: 1 / 4;
+    margin: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10px;
+    background-color: var(--white);
+    border-radius: 5px;
+    border-left: 10px solid var(--orange);
+    color: var(--darkgray);
+    gap: 35px;
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    color: var(--darkgray);
+}
+
+.project-buttons>button>span {
+    font-size: 2em;
+}
+
+.project-buttons>button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-buttons>button:hover {
+    color: var(--orange);
+    transform: scale(1.2);
+}
+
+
+.content-title {
+    margin-bottom: 10px;
+    color: var(--darkgray);
+}
+
+.side-content {
+    margin: 20px 40px 20px 0;
+}
+
+.announcements,
+.trending {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 0px 20px 0px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.announcement {
+    color: var(--darkgray);
+    border-bottom: 3px solid var(--gray);
+}
+
+.announcement>p {
+    margin-bottom: 20px;
+    font-size: .75em;
+}
+
+.announcement:last-child {
+    border-bottom: none;
+}
+
+.announcement>h3 {
+    margin-top: 20px;
+}
+
+.trending {
+    padding: 20px;
+    gap: 20px;
+}
+
+div.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info>span {
+    font-weight: 500;
+}
+
+.user-info>p {
+    font-weight: 100;
+}
+
+.user-2 {
+    background-image: var(--avatar2);
+}
+
+.user-3 {
+    background-image: var(--avatar3);
+}
+
+.user-4 {
+    background-image: var(--avatar4);
+}
+
+.name {
+    font-size: 1.5em;
 }
